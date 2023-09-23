@@ -1,5 +1,7 @@
 package Game;
 
+import java.util.Scanner;
+
 public class Interface extends Game{
 	public void display() {
 		
@@ -40,6 +42,7 @@ public class Interface extends Game{
 			if (num > 0 && num <= 9) {
 				if (GameState[num - 1][0] == 1) {
 					System.out.print("\n Spot is taken, try again");
+					scanner.nextLine(); //flush the input stream if more than 1 input was given
 					continue;
 				}
 				GameState[num - 1][0] = 1;
@@ -49,6 +52,7 @@ public class Interface extends Game{
 				else {
 					GameState[num - 1][1] = 1;
 				}
+				scanner.nextLine();
 				break;
 			}
 			else {

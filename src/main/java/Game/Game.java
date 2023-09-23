@@ -1,7 +1,11 @@
 package Game;
 
 import java.util.Scanner;
-
+/*
+ * doesnt check for ties
+ * known bug: 1 2 3 4 5 6 7... multi inserts
+ * should have a yes or no to play again
+ */
 public class Game {
 	protected static Scanner scanner = new Scanner(System.in);
 	protected static int[][] GameState = new int[9][2];
